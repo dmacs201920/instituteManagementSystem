@@ -1,0 +1,57 @@
+SL NO.| TEACHER'S NAME | YEAR OF | DEPARTMENT |                          SUBJECT TEACHING TO THE STUDENT 
+      |                | JOINING |            |------------------------------------------------------------------------------------------------------------------------
+      |                |         |            |                   1ST YEAR                    2ND YEAR                       3RD YEAR         
+      |                |         |            |------------------------------------------------------------------------------------------------------------------------
+      |                |         |            |     EVEN       |    ODD       |     EVEN       |       ODD      |        EVEN   |     ODD      
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1     DEBASIS DASH       2019     MATHEMATICS       TOPOLOGY    RA-1           CALCULUS        PROBABILITY         ALGO         COMPLEX_ANA                  
+  2     UTSAV RAI          2020     PHYSICS        ELECTRONICS   OPTICS          MECHANICS       ELCTRODYANMIC  QUANTUM_MECHANICS   MICRO
+  3     SRUJAN SAI         1999     MATHEMATICS    ABCD          DEFG            HIJKL           MNOP             QRST              UVWXYZ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

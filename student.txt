@@ -1,0 +1,5 @@
+SL.NO|		NAME		| REGD.NO |	DATEOFBIRTH	| AGE |   GENDER   |	DEPARTMENT	|  YEAROFJOINING  |  AMOUNT | SEMESTER
+  1    UTSAV RAI                  173248        27 01 1999        21      MALE          MATHEMATICS            2017            0       0     
+  2    DEBA DAS                   173243        22 02 1998        22      MALE          MATHEMATICS            2017            0       0 
+  3    SUSHIL DA                  173247	22 09 1999        21	  MALE		MATHEMATICS	       2017 	       0       0
+

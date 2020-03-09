@@ -1,0 +1,27 @@
+|---------DATE---------|---------MONTH---------|---------YEAR---------|---------NO OF DAYS---------|---------EVENTS------------------|
+	04			01			2020			10	                ANNUAL SPORTS AND CULTURALMEET
+	14			01			2020			1		        BHOGI
+	15			01			2020			1			MAKARSAKRANTI
+	26			01			2020			1			REPUBLICDAY
+	28			02			2020			2			MAHASHIVARATRI
+	25			03			2020			1			UGADI
+	02                      04                      2020                    1                       RAM NAWAMI
+        10       		04 			2020			1			GOODFRIDAY
+	24			04			2020			3			ARADHANA MAHOTSAVAM
+	25			05			2020			1			EID_AL_FITR
+	05			07			2020			1			GURUPURNIMA
+	12			08			2020			1			KRISHNAJANMASHTAMI
+	15			08			2020			1			INDEPENDENCE DAY
+	22			08			2020			1			GANESH CHATURTHI
+        30                      08                      2020                    1                       MUHARRAM
+        02                      10 			2020			1			GANDHI JAYANTI
+	23			10			2020			1			DURGASHTAMI
+	24			10			2020			1			MAHANAVAMI
+	25			10			2020			8			VIJAYADASHAMI
+	14			11			2020			9			DIWALI
+	14			11			2020			2		        GLOBAL AKHANDA BHAJAN
+	22			11			2020			1		        ANNUAL CONVOCATION SSSIHL
+	23			11			2020			3		        SWAMI'S BIRTHDAY
+	25			12			2020			1			CHRISTMAS
+		
+
