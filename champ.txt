@@ -1,0 +1,5 @@
+REGDNO                 TRACK       FIELD     FIRST  SECOND   THIRD  
+173248                   3           2         2       1       1
+173238                   2           3         1       3       1
+173247                   3           1         1       2       0
+

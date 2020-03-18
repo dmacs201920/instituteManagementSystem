@@ -1,0 +1,43 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+PROJECT NAME = INSTITUTE MANAGEMENT SYSTEM
+PROJECT PARTNER = DEBASIS DASH(173238) & UTSAV RAI (173248)
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+THIS PROJECT IS ON BASED ON DATABASE MANAGEMENT , IT IS DIVIDED INTO 6 PARTS ->
+{ All the data is taken from the text file and converted into the binary file for further work on it }
+
+1.ADMINISTRATIVE PURPOSE:(password included)
+------------------------
+In this section admin head can access into it by entering a password.He can change the necessary details of a student such as modification of  student details,dislaying the details of all the student .  Then he can modify the fee of a student and increment the current student semester.It  ensures that student has been allowed to next semester.It has a section to calculate student population and calculate the attendance percentage.
+
+2.VARIOUS EVENTS:
+-----------------
+In this subsection a person can see the festival occuring in different months.The special thing about this is here you can put the date or month no. to display the festival occuring in that given number(also shows how many days it occuring).
+
+3.GENERAL DETAILS:
+------------------
+Here it's all about the student teacher personal details.User can display personal details of teacher and student , student teacher ratio,count the student population.
+
+4.TEACHER DETAILS:(password included)
+-----------------
+A admin  can see teacher details ,he can modify it or delete it .
+
+5.RESULTS OF THE ACADEMIC YEARl:
+--------------------------------
+A person  can calculate the pecentage of each student in his respective exams.Then it can  assign the grade according to their performance .It can assign the rank of student according to their percentage also it can assign the rank in their departmentwise ,so a student can check himself where he stands in the department and college.
+
+6.EXTRA CURRICULAR ACTIVITIES:
+------------------------------
+Here a person can read the given data and caluclate the points he scored in various field and track events .Then he can display the student name and  total point in descending order and declare the champion of sports events.
+
+0.EXIT:
+-------
+The user can come out of the program.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ACKNOWLEDGEMWNT 
+---------------
+We sincerely thank the alumni brothers for giving this project to explore our ideas and innovation by using C language .We are glad that we have successfully completed the project wthin our limited knowledge in C.We also thanks Darshan sir and alumni brothers for their valuble suggestion and correction for our smooth completion of the  project.
