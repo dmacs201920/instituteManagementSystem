@@ -37,7 +37,7 @@ void display()
 /////////THE FUNCTION MODIFIES THE STUDENT DETAILS BASED ON A PARTICULAR CHOICE(EX:NAME,REGD_NO,YEAR OF JOINING,etc)(WRITTEN BY UTSAV-173248)/////////
 void modify()
 {  
-    FILE *ft;
+    FILE *ft,*fr;
     int i,choice;
 
     ft=fopen("studentb.txt","rb+");
@@ -277,7 +277,6 @@ void read_stud()
 	puts("cannot open the file\n");
 	exit(1);
     }
-
 
     fs=fopen("student.txt","r+");
     if(fs==NULL)
@@ -1343,8 +1342,10 @@ change:
       }
     else
        {printf("+==============================================HELLO ADMIN================================================+\n");
-	                             printf("ENTER 1  TO LOG IN AND ENTER 2 CHANGE THE PASSWORD:");
-	                             scanf("%d",&choice);
+	                             printf("1)LOGIN\n");
+				     printf("2)CHANGE PASSWORD AND LOGIN\n");
+				     printf("3)QUIT AND DELETE ALL THE MODIFICATIONS\n");
+	                             scanf("   %d",&choice);
 	switch(choice)
 	   { 
 	       case 1:
@@ -1352,10 +1353,14 @@ change:
 		    decrypt(str3,file);
 		    break;
 
-	      case 2:
+A	      case 2:
 		    goto change;
 		    decrypt(str3,file);
 		    break;
+		    
+	      case 3:
+		     encrypt("0000",file);
+		     exit(0);
 
 	      default:
 		      printf("SORRY INVALID INPUT\n");
@@ -1387,7 +1392,43 @@ change:
   }
 
 
-
+void feed()
+{       FILE* fr;
+        char any='y';
+        fr=fopen("studentb.txt","w+");
+	 if(fr==NULL)
+	   {printf("FILE can't be open\n");
+	    exit(1);
+	   }
+	        fseek(fr,0,2);
+	        while(any=='y')
+		  { printf("Feed the details:\n");
+		    printf("Enter the serial number:");
+		    scanf(" %d",&s.ser);
+		    printf("First Name:");
+		    scanf("%s",s.F_name);
+		    printf("last Name:");
+		    scanf("%s",s.L_name);
+		    printf("Registration number:");
+		    scanf("%d",&s.regd_no);
+		    printf("Date of birth:");
+		    scanf("%d %d %d",&s.dt.d,&s.dt.m,&s.dt.y);
+		    printf("Age:");
+		    scanf("%d",&s.age);
+		    printf("Gender:");
+		    scanf("%s",s.gender);
+		    printf("Department:");
+		    scanf("%s",s.department);
+		    printf("Year of joining:");
+		    scanf("%d",&s.yoj);
+		    s.a.amount=0;
+		    s.a.sems=0;
+		    fwrite(&s,sizeof(s),1,fr);
+		    printf("Any other record(y/n)");
+		    scanf(" %c",&any);
+	           }
+                fclose(fr);
+}
 
 
 

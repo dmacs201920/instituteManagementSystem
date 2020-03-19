@@ -2,14 +2,17 @@
 /////////////////WRITTEN BY:UTSAV RAI(173248)//////////////////////////////////////////////////
 #include"fheader.h"
 void main(int n,char* file[] )
-{   char any='y';
+{   char any='y',str[15];
     int choice,j=1,i,k;
     system("clear");
     if(n!=2)
     { printf("inappropriate argument\n");
 	exit(-1);
     }
-    read_stud();
+    decrypt(str,file[1]);
+    if(strcmp(str,"0000")==0)
+      {read_stud();
+      }
     read_fest();
     r_sports();
     mv2bin();
@@ -55,6 +58,7 @@ void main(int n,char* file[] )
 			printf("|4.FEE MODIFICATION------------------------------------------------------------------|\n");
 			printf("|5.CHECK THE NUMBER OF STUDENTS------------------------------------------------------|\n");
 			printf("|6.STUDENTS ATTENDANCE FOR A PARTICULAR SEMESTER-------------------------------------|\n");
+			printf("|7.FEED NEW STUDENT DETAILS----------------------------------------------------------|\n");
 			printf("|0.exit------------------------------------------------------------------------------|\n");
 			printf("+------------------------------------------------------------------------------------+\n");
 			scanf("         %d",&choice);
@@ -104,6 +108,10 @@ void main(int n,char* file[] )
 				    scanf("%d",&j);
 				}				       }
 			        break;
+
+			     case 7:
+				    feed();
+				    break;
 
 
 			   case 0:
