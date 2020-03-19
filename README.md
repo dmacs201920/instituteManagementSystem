@@ -12,12 +12,11 @@ WRITTEN BY: UTSAV RAI(173248) AND DEBASIS DAS(173238)
 DESCRIPTION:
 1)The INSTITUTE MANAGEMENT SYSTEM is divided into different areas like student and teacher details,fee submission,festivals and events,results of the students,attendance,extra curricular activities.
 2)The modifications of the details of students and teachers can be proceeded only with the help of password. Basically,the administration of  the institute is only allowed to modify,delete the contents(official*).
-3)The initial password is sairam123.From this, user can proceed further with the administrative option and if required can change the password
-4)The project has an option of entering 1 to continue with the same submenu and entering 0 or any number except 1 to go back to the previous  menu.
-5)The details are read from the text file(in the beginning of the main program) and the work is performed in the binary text file.
-6)For calculating the attendance of the student,working days is required which will be same for all the students;
-7)To run the project the file name ("passnew.txt") should be written on the command line(say:./fout passnew.txt).
-8)There are three options to enter the administrative options:
+3)The project has an option of entering 1 to continue with the same submenu and entering 0 or any number except 1 to go back to the previous  menu.
+4)The details are read from the text file(in the beginning of the main program) and the work is performed in the binary text file.
+5)For calculating the attendance of the student,working days is required which will be same for all the students.
+6)To run the project the file name ("passnew.txt") should be written on the command line(say:./fout passnew.txt).
+7)There are three options to enter the administrative options:
   a)login:ENTER THE Initial password "0000" and the user is asked to change the password for safety.
   b)change the password:The option helps us to change the password(The user should not keep the password like 0000,1111,etc for safety.
   c)Quit as an user(*deletes all the modifications*)

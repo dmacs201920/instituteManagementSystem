@@ -1,5 +1,5 @@
 
-
+//////////FUNCTIONS FOR INSTITUTE MANAGEMENT PROGRAM/////////////////
 
 #include"fheader.h"
 stud s;
@@ -1315,7 +1315,7 @@ int verify_pass(char *file)
  {  FILE *fp;
     char any='y';
     int j=1,choice;
-    char str2[15],str1[15],str[15],str3[15];
+    char str2[15],str1[15],str[15],str3[15],str4[15]="0000";
     fp=fopen(file,"rb+");
     fread(&p,sizeof(p),1,fp);
      decrypt(str3,file);
@@ -1332,6 +1332,7 @@ change:
           if(strcmp(str1,str2)==0)
 	    { encrypt(str1,file);
 	      any='j';
+	      printf("PASSWORD CHANGED SUCCESSFULLY\n\n");
 	      break;
 	    }
           else 
@@ -1353,14 +1354,13 @@ change:
 		    decrypt(str3,file);
 		    break;
 
-A	      case 2:
+ 	       case 2:
 		    goto change;
-		    decrypt(str3,file);
 		    break;
 		    
 	      case 3:
-		     encrypt("0000",file);
-		     exit(0);
+		     encrypt(str4,file);
+		     break;
 
 	      default:
 		      printf("SORRY INVALID INPUT\n");
@@ -1368,24 +1368,26 @@ A	      case 2:
 
             }
        }
-
+      
+      printf("DO YOU WANT TO LOGIN?\n");
       decrypt(str3,file);
       if(strcmp(str3,"0000")!=0)
          { while(j==1)
               { 
 		  password:
-		     printf("ENTER THE PASSWORD:");
+		     printf("ENTER THE PASSWORD TO LOGIN:");
 	        	scanf("%s",str1);
 			decrypt(str2,file);
 			if(strcmp(str1,str2)==0)
-		          {	 return 1;
+			  {	 return 1;
 		    		j=0;
 
-		   	  }	
+		   	  }
 			else
-		    { printf("WRONG PASSWORD(TRY AGAIN)\n");
-		      j=1;
-		    }
+		           { printf("THE PASSWORD IS NOT SECURED CHANGE AND LOGIN(TRY AGAIN)\n");
+	                     exit(1);
+		             j=1;
+		           }  
 	       }
           }
      fclose(fp);

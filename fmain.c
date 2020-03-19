@@ -11,7 +11,7 @@ void main(int n,char* file[] )
     }
     decrypt(str,file[1]);
     if(strcmp(str,"0000")==0)
-      {read_stud();
+      { read_stud();
       }
     read_fest();
     r_sports();
@@ -103,10 +103,13 @@ void main(int n,char* file[] )
 					    attend();
 					    break;
 
+					 default:
+					         puts("invalid entry\n");
+
 				    }
 				    printf("TO CONTINUE WITH THE ATTENDANCE MENU(ENTER 1) OR ELSE(ENTER ANY NUMBER) TO GO TO THE PREVIOUS MENU:");
-				    scanf("%d",&j);
-				}				       }
+				    scanf("  %d",&j);
+				}				
 			        break;
 
 			     case 7:
@@ -119,13 +122,14 @@ void main(int n,char* file[] )
 
 			default:
 			printf("INVALID OPTION\n");
+		     }
 
 		    }
-		}
-		printf("TO CONTINUE AS AN ADMINISTRATIVE PERSON(ENTER 1) OR ELSE GO BACK TO THE MAIN MENU:");
-		scanf(" %d",&j);
-		system("clear");
-	      break;
+		   printf("TO CONTINUE AS AN ADMINISTRATIVE PERSON(ENTER 1) OR ELSE (ENTER ANY NUMBER) TO GO BACK TO THE MAIN MENU:");
+		   scanf(" %d",&j);
+	        }
+		//system("clear"); 
+	         break;
 	    
 
        case 2:
