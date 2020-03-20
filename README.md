@@ -19,7 +19,7 @@ DESCRIPTION:
 7)There are three options to enter the administrative options:
   a)login:ENTER THE Initial password "0000" and the user is asked to change the password for safety.
   b)change the password:The option helps us to change the password(The user should not keep the password like 0000,1111,etc for safety.
-  c)Quit as an user(*deletes all the modifications*)
+  c)Quit (*deletes all the modifications and initializes password to the default password*)
 =====================================================================================================================================================.C file:
 1)func.c:The file contains the functions required for the project which includes,
     (a)functions for reading the student details ,teacher details,student reports,festivals,attendance.

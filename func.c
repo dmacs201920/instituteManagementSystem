@@ -120,7 +120,7 @@ void modify()
 	}
       }
 	printf("Modify any other record(y/n):");
-	any=getchar();
+	scanf(" %c",&any);
     }
     fclose(ft);
 }
@@ -381,19 +381,19 @@ void display_fest()
     fest E;
     int choice,d1,d2,d3,m1,m2,m3; 
     fseek(fd,0,0);
-    printf("1)DISPLs. FESTIVc.s.S FOR THE ENTIRE YEAR\n2)DISPLAY FESTIVAL FOR A PARTICULAR MONTH\n3)DISPLAY FESTIVAL FOR A PARTICULAR DAY\n");
+    printf("1)DISPLAY FESTIVALS FOR THE ENTIRE YEAR\n2)DISPLAY FESTIVAL FOR A PARTICULAR MONTH\n3)DISPLAY FESTIVAL FOR A PARTICULAR DAY\n");
     scanf("   %d",&choice);
     switch(choice)
     { case 1:
 	fread(&E,sizeof(fest),1,fd);	   
-	printf("VArIOUS festivals IN OUR INSTITUTE:\n");
+	printf("VARIOUS FESTIVALS AND EVENTS  IN OUR INSTITUTE:\n");
 	while(!feof(fd))
 	{ printf("					%d-%d-%d(%ddays):%s\n",E.day,E.month,E.year,E.days,E.fes); 
 	    fread(&E,sizeof(fest),1,fd);
 	}
 	break;
 	case 2:
-	printf("ENTER THE MONTH FOR WHICH YOU Ws.T TO CHECK FESTIVc.s.S\n");
+	printf("ENTER THE MONTH FOR WHICH YOU WANT TO CHECK THE FESTIVALS\n");
 	scanf(" %d",&m3);
 	fread(&E,sizeof(fest),1,fd);
 	while(!feof(fd))
@@ -467,7 +467,7 @@ void display_fest()
 	break;
 
 	case 3:
-	printf("ENTER THE Ds.E\n");
+	printf("ENTER THE DATE \n");
 	scanf(" %d",&d2);
 	fread(&E,sizeof(fest),1,fd);
 	while(!feof(fd))
@@ -1324,22 +1324,28 @@ int verify_pass(char *file)
 change:
        printf("ENTER THE CURRENT PASSWORD\n");
        scanf("%s",str);
-       while(any=='y' && strcmp(str,str3)==0)
-          {printf("ENTER THE NEW PASSWORD:");
-           scanf(" %s",str1);
-           printf("CONFIRM NEW PASSWORD:");
-           scanf(" %s",str2);
-          if(strcmp(str1,str2)==0)
-	    { encrypt(str1,file);
-	      any='j';
-	      printf("PASSWORD CHANGED SUCCESSFULLY\n\n");
-	      break;
-	    }
-          else 
-            {printf("TRY AGAIN(WRONG ENTRIES)\n");
-             any='y';
-	    }
-          }
+       if(strcmp(str,str3)==0) 
+         {while(any=='y') //&& strcmp(str,str3)==0)
+           {printf("ENTER THE NEW PASSWORD:");
+            scanf(" %s",str1);
+            printf("CONFIRM NEW PASSWORD:");
+            scanf(" %s",str2);
+            if(strcmp(str1,str2)==0)
+	      { encrypt(str1,file);
+	        any='j';
+	        printf("PASSWORD CHANGED SUCCESSFULLY\n\n");
+	        break;
+	      }
+            else 
+              {printf("TRY AGAIN(WRONG ENTRIES)\n");
+               any='y';
+	      }
+           }
+         }
+       else
+           {printf("SORRY WRONG PASSWORD(TRY AGAIN LATER)\n");
+	    exit(-1);
+	   }
       }
     else
        {printf("+==============================================HELLO ADMIN================================================+\n");
@@ -1359,8 +1365,20 @@ change:
 		    break;
 		    
 	      case 3:
-		     encrypt(str4,file);
-		     break;
+		   while(j==1)
+		    {printf("ARE YOU SURE YOU WANT TO FORMAT ALL THE MODIFICATIONS?\n");
+		     printf("ENTER THE PASSWORD FOR CONFIRMATION:");
+		     scanf(" %s",str);
+		     if(strcmp(str3,str)==0);
+		       {encrypt(str4,file);
+			printf("ALL THE MODIFICATIONS HAVE BEEN ALTERED(PASSWORD HAS BEEN ALSO CHANGED TO THE DEFAULT/INITIAL PASSWORD)\n");
+		         exit(-1);
+		       }
+		     if(strcmp(str3,str)!=0)
+		       {printf("INVALID PASSWORD(TRY AGAIN)\n");
+			j=1;
+			}
+		    }
 
 	      default:
 		      printf("SORRY INVALID INPUT\n");
@@ -1384,8 +1402,7 @@ change:
 
 		   	  }
 			else
-		           { printf("THE PASSWORD IS NOT SECURED CHANGE AND LOGIN(TRY AGAIN)\n");
-	                     exit(1);
+		           { printf("THE PASSWORD IS NOT CORRECT TO  LOGIN(TRY AGAIN)\n");
 		             j=1;
 		           }  
 	       }
@@ -1393,11 +1410,12 @@ change:
      fclose(fp);
   }
 
-
+////FUNCTION ADDS THE DETAILS OF THE NEW STUDENTS IN THE EXISTING FILE//////////////////////
+////WRITTEN BY:UTSAV RAI(173248)////////////////
 void feed()
 {       FILE* fr;
         char any='y';
-        fr=fopen("studentb.txt","w+");
+        fr=fopen("studentb.txt","rb++");
 	 if(fr==NULL)
 	   {printf("FILE can't be open\n");
 	    exit(1);

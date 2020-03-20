@@ -195,6 +195,7 @@ void main(int n,char* file[] )
 	    }
 	    printf("TO CONTINUE WITH STUDENT DETAILS(enter 1) OR ELSE(ENTER ANY NUMBER) TO GO BACK TO THE MAIN MENU:");
 	    scanf(" %d",&j);
+	    system("clear");
 
 	}
 	break;
@@ -236,6 +237,7 @@ void main(int n,char* file[] )
 	    }
 	    printf("TO CONTINUE WITH TEACHER'S MENU(enter 1) OR ELSE (ENTER ANY NUMBER)TO GO BACK TO THE MAIN MENU:");
 	    scanf("%d",&j);
+	    system("clear");
 	}
 	break;
 
@@ -268,6 +270,7 @@ void main(int n,char* file[] )
 	    }
 	    printf("TO CONTINUE WITH RESULTS MENU(ENTER 1)OR ELSE(ENTER ANY NUMBER) TO GO BACK TO MAIN MENU:");
 	    scanf("%d",&j);
+	    system("clear");
 	}
 	break;
 
@@ -301,6 +304,7 @@ void main(int n,char* file[] )
 	    }
 	    printf("TO CONTINUE WITH THE EXTRA CURICULAR OPTIONS(ENTER 1) OR ELSE (ENTER ANY NUMBER) TO GO BACK TO THE MAIN MENU:");
 	    scanf(" %d",&j);
+	    system("clear");
 	}
 	break;
 	case 9:
